@@ -14,3 +14,6 @@ class TestCar:
         car.move(5)
 
         assert car.distance_traveled == 9
+
+    def test_move_velocidad_modifications(self) :
+        pass

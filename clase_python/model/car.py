@@ -17,6 +17,7 @@ class Car(VehicleABC):
         self.__model = model #modelo del carro
         self.__door_quantity = door_quantity #cantidad de puertas
         self.__distance_traveled = 0
+        self._velocidad = 0
 
     #función de moverse
     def move(self, additional_distance) -> None: #none que no retorna nada
@@ -25,6 +26,12 @@ class Car(VehicleABC):
             self.__distance_traveled += additional_distance
         else:
             self.__distance_traveled += MAX_DISTANCE_CAN_TRAVEL
+
+    def fast(self, acelaracion ) -> None:
+        if fast(aceleracion== True) :
+            self._velocidad += 10
+        else:
+            self._velocidad = 0
 
     @property
     # el decorador property permite gestionar todo lo refente al atributo brand
